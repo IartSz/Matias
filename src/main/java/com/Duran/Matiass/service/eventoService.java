@@ -37,4 +37,7 @@ public class eventoService {
         return eventoRepository.modificarCapacidad();
     }
     
+    public Evento readbyId(int id){
+        return eventoRepository.obtenerPorId(id);
+    }
 }

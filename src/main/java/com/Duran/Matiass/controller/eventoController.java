@@ -64,6 +64,9 @@ public class eventoController {
         return eventoService.delete(id);
     }
 
-
+    @GetMapping("id/{id}")
+    public Evento getEventobyId(@PathVariable int id){
+        return eventoService.readbyId(id);
+    }
 
 }
