@@ -12,8 +12,7 @@ import lombok.NoArgsConstructor;
 
 @Data
 @NoArgsConstructor
-@AllArgsConstructor
-public class Eventos {
+public class Evento {
     
     private static final AtomicInteger contador = new AtomicInteger(1);
     private int id;
@@ -22,20 +21,24 @@ public class Eventos {
     @NotBlank(message = "Debe agregar un nombre para el evento")
     @Size(min = 1, max = 200, message = "El nombre del evento debe ser de minimo un caracter y maximo 200")
     private String nombre;
+    
     @NotBlank(message = "Debe agregar un nombre para el evento")
     @Size(min = 1, max = 200, message = "El nombre del evento debe ser de minimo un caracter y maximo 200")
     private String tipoEvento;
+    
     @NotBlank(message = "Debe agregar un nombre para el evento")
     @Size(min = 1, max = 200, message = "El nombre del evento debe ser de minimo un caracter y maximo 200")
     private String fechaRealizacion;
+    
     @NotBlank(message = "Debe agregar un nombre para el evento")
     @Size(min = 1, max = 200, message = "El nombre del evento debe ser de minimo un caracter y maximo 200")
     private String ubicacion;
+
     @Min(value = 1, message = "La capacidad no puede ser negativa")
     @Max(value = 1000, message = "La capacidad maxima es de 1000")
     private int capacidad;
 
-    public Eventos(String nombre, String tipoEvento, String fechaRealizacion, String ubicacion, int capacidad){
+    public Evento(String nombre, String tipoEvento, String fechaRealizacion, String ubicacion, int capacidad){
         this.id = contador.getAndIncrement();
         this.nombre = nombre;
         this.tipoEvento = tipoEvento;
