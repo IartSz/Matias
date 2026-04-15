@@ -7,5 +7,6 @@ import lombok.Data;
 @AllArgsConstructor
 public class CapacidadDTO {
     private String nombre;
+    private String tipoEvento;
     private int capacidad;
 }

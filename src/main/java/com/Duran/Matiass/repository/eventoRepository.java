@@ -49,7 +49,7 @@ public class eventoRepository {
     public List<CapacidadDTO> modificarCapacidad(){
         List<CapacidadDTO> capacidades = new ArrayList<>();
         for(Evento e : eventoss){
-            CapacidadDTO cdto = new CapacidadDTO(e.getNombre(),e.getCapacidad()-200);
+            CapacidadDTO cdto = new CapacidadDTO(e.getNombre(),e.getTipoEvento(),e.getCapacidad()-200);
             capacidades.add(cdto);
         }
         return capacidades;
